@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 function Book({ title, author }) {
   return (
     <div>
@@ -19,5 +21,10 @@ function Book({ title, author }) {
     </div>
   );
 }
+
+Book.propTypes = {
+  title: PropTypes.string.isRequired,
+  author: PropTypes.string.isRequired,
+};
 
 export default Book;
