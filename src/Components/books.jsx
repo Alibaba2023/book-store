@@ -7,9 +7,9 @@ function Book({ title, author }) {
         <h3>{title}</h3>
         <p>{author}</p>
         <div>
-          <button>Comments</button>
-          <button>Remove</button>
-          <button>Edit</button>
+          <button type="button">Comments</button>
+          <button type="button">Remove</button>
+          <button type="button">Edit</button>
         </div>
       </div>
 
