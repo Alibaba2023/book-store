@@ -14,7 +14,7 @@ const data = [
   },
   {
     id: 3,
-    title: 'Book',
+    title: 'Book title',
     author: 'Author',
   },
 ];

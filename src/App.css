@@ -1,5 +1,10 @@
 .App {
-  margin: 0;
-  padding: 0;
+  padding: 30px 50px;
   box-sizing: border-box;
+  list-style: none;
+  max-width: 800px;
+  margin: 3rem auto;
+  background: lightblue;
+  border-radius: 9px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
 }
