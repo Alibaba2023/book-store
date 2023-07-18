@@ -2,15 +2,8 @@
   box-sizing: border-box;
   list-style: none;
   text-decoration: none;
-}
-
-.App {
-  padding: 30px 50px;
-  max-width: 800px;
-  margin: 3rem auto;
-  background: lightblue;
-  border-radius: 9px;
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+  padding: 0;
+  margin: 0;
 }
 
 .logo {
@@ -18,12 +11,22 @@
   height: 50px;
   background-color: white;
   border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+body {
+  background-color: #fff0f6;
+  min-width: 700px;
 }
 
 .header {
+  padding: 10px 100px;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: white;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
 }
 
 .page-lists {
@@ -31,4 +34,62 @@
   justify-content: space-between;
   align-items: center;
   gap: 20px;
+}
+
+.book-container {
+  padding: 30px 50px;
+  max-width: 900px;
+  margin: 3rem auto;
+  border-radius: 9px;
+}
+
+.book-item-container {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 2fr 1fr 1fr;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+  margin: 25px 0;
+  padding: 20px 40px;
+  background-color: white;
+  border-radius: 1%;
+}
+
+.container-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.a-book-buttons {
+  padding: 2px 5px;
+  color: white;
+  background-color: #4dabf7;
+  border: solid #4dabf7 3px;
+  border-radius: 5px;
+}
+
+.book-buttons {
+  padding: 2px 5px;
+  color: white;
+  background-color: #1c7ed6;
+  border: solid #1c7ed6 3px;
+  border-radius: 5px;
+}
+
+.current-chapter-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+form {
+  display: grid;
+  align-items: center;
+  max-width: 1000px;
+  grid-template-columns: 2fr 1fr 1fr;
+  column-gap: 20px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+  margin: 25px 0;
+  padding: 20px 40px;
+  background-color: white;
+  border-radius: 1%;
 }
