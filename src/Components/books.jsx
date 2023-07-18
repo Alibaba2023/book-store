@@ -1,22 +1,26 @@
 import PropTypes from 'prop-types';
 
-function Book({ title, author }) {
+function Book({ catagories, title, author }) {
   return (
-    <div>
+    <div className="book-item-container">
       <div>
+        <h4>{catagories}</h4>
         <h3>{title}</h3>
         <p>{author}</p>
-        <div>
-          <button type="button">Comments</button>
-          <button type="button">Remove</button>
-          <button type="button">Edit</button>
+        <div className="container-buttons">
+          <button type="button" className="a-book-buttons">Comments</button>
+          <button type="button" className="a-book-buttons">Remove</button>
+          <button type="button" className="a-book-buttons">Edit</button>
         </div>
       </div>
-
       <div>
-        <span>Current Chapter</span>
-        <span>Chapter 17</span>
-        <button type="button">CHECK STATUS</button>
+        <h3>65%</h3>
+        <p>Completed</p>
+      </div>
+      <div className="current-chapter-container">
+        <p>Current Chapter</p>
+        <p>Chapter 17</p>
+        <button type="button" className="book-buttons">Update prograss</button>
       </div>
     </div>
   );
@@ -25,6 +29,7 @@ function Book({ title, author }) {
 Book.propTypes = {
   title: PropTypes.string.isRequired,
   author: PropTypes.string.isRequired,
+  catagories: PropTypes.string.isRequired,
 };
 
 export default Book;
