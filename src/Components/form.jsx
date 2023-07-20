@@ -5,7 +5,7 @@ import { addBook } from '../redux/books/booksSlice';
 function Form() {
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
-  const [category, setCategory] = useState('');
+  const [categories, setCategories] = useState('Book');
 
   const dispatch = useDispatch();
 
@@ -13,12 +13,12 @@ function Form() {
     e.preventDefault();
 
     // Dispatch the addBook action with the input values as payload
-    dispatch(addBook({ title, author, category }));
+    dispatch(addBook({ title, author, categories }));
 
     // Reset the input fields
     setTitle('');
     setAuthor('');
-    setCategory('');
+    setCategories('');
   };
 
   return (
@@ -41,8 +41,8 @@ function Form() {
         name="categories"
         id="form-category"
         required
-        value={category}
-        onChange={(e) => setCategory(e.target.value)}
+        value={categories}
+        onChange={(e) => setCategories(e.target.value)}
       >
         <option value="book">Book</option>
         <option value="News">News</option>
