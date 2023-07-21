@@ -84,11 +84,11 @@ body {
 form {
   display: grid;
   align-items: center;
-  max-width: 1000px;
+  max-width: 900px;
   grid-template-columns: repeat(4, 1fr);
   column-gap: 20px;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
-  margin: 25px 0;
+  margin: 25px auto;
   padding: 20px 40px;
   background-color: white;
   border-radius: 1%;
