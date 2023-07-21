@@ -73,7 +73,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- ✅ You can see the live demo of this webpage by clicking: [Live Demo Link](https://book-store-04jc.onrender.com/)
+- ✅ You can see the live demo of this webpage by clicking: [Live Demo Link](https://book-store-oti6.onrender.com)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
