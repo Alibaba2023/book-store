@@ -3,22 +3,25 @@ import { useDispatch } from 'react-redux';
 import { addBook } from '../redux/books/booksSlice';
 
 function Form() {
-  const [title, setTitle] = useState('');
+  const [category, setCategory] = useState('category');
+  const [booknName, setBookName] = useState('');
   const [author, setAuthor] = useState('');
-  const [categories, setCategories] = useState('Book');
 
   const dispatch = useDispatch();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    // Dispatch the addBook action with the input values as payload
-    dispatch(addBook({ title, author, categories }));
-
-    // Reset the input fields
-    setTitle('');
+    if (category === 'category' || !booknName) return;
+    const newBook = {
+      item_id: new Date().getTime(),
+      title: booknName,
+      author,
+      category,
+    };
+    dispatch(addBook(newBook));
+    setCategory('');
+    setBookName('');
     setAuthor('');
-    setCategories('');
   };
 
   return (
@@ -26,8 +29,8 @@ function Form() {
       <input
         type="text"
         placeholder="Book Title"
-        value={title}
-        onChange={(e) => setTitle(e.target.value)}
+        value={booknName}
+        onChange={(e) => setBookName(e.target.value)}
         required
       />
       <input
@@ -38,15 +41,14 @@ function Form() {
         required
       />
       <select
-        name="categories"
+        name="category"
         id="form-category"
         required
-        value={categories}
-        onChange={(e) => setCategories(e.target.value)}
+        value={category}
+        onChange={(e) => setCategory(e.target.value)}
       >
-        <option value="book">Book</option>
-        <option value="News">News</option>
-        <option value="History">History</option>
+        <option value="Category">Category</option>
+        <option value="Book">Book</option>
       </select>
       <button type="submit" className="book-buttons">
         ADD BOOK
