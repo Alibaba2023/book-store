@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import Book from './books'; // Make sure the filename matches the component name (assuming it is 'Book.js')
-import Form from './form'; // Assuming you have a Form component
+import Book from './books';
+import Form from './form';
 import { getAllBooks } from '../redux/books/booksSlice';
 
 function BookList() {
@@ -35,7 +35,7 @@ function BookList() {
               title={book.title}
               author={book.author}
               category={book.category}
-              itemId={book.item_id} // Correct the prop name to 'itemId'
+              itemId={book.item_id}
             />
           ))}
         </div>
